@@ -1,0 +1,28 @@
+{
+    "criteria":{
+        "use_from_any_hand":{
+            "trigger":"item_used_on_block",
+            "conditions":{
+                "location":[
+                    {
+                        "condition":"block_state_property",
+                            "block":"jukebox",
+                            "properties": {
+                                "has_record":"true"
+                            }
+                    },
+                    {
+                        "condition":"match_tool",
+                        "predicate":{
+                            "tag": "minecraft:music_discs",
+                            "nbt":"{custom_music:{}}"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards":{
+        "function":"custom_music_discs:use_custom_record"
+    }
+}

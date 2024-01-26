@@ -1,4 +1,4 @@
-# do this at the beginning of a tick at jukebox markers
+# do this at the beginning of a tick at jukebox markers that haven't started playing yet
 # 1. stop vanilla music (all records for now)
 # 2. display Now Playing message
 # 3. play custom music with correct volume and pitch
@@ -20,12 +20,13 @@ stopsound @a record music_disc.strad
 stopsound @a record music_disc.wait
 stopsound @a record music_disc.ward
 
-data modify storage custom_music_discs:data jukebox.record.custom_music set from block ~ ~ ~ RecordItem.tag.custom_music
+data modify storage custom_music_discs:data jukebox.record.custom_music set from entity @s data.custom_music
+
 execute if data storage custom_music_discs:data jukebox.record.custom_music.display_name run title @a[distance=..64] times 10 70 20
 execute if data storage custom_music_discs:data jukebox.record.custom_music.display_name run title @a[distance=..64] actionbar {"translate":"record.nowPlaying", "color":"dark_green", "with":[{"type":"nbt", "source":"storage", "storage":"custom_music_discs:data", "nbt":"jukebox.record.custom_music.display_name"}]}
 
 execute unless data storage custom_music_discs:data jukebox.record.custom_music.volume run data modify storage custom_music_discs:data jukebox.record.custom_music.volume set value 1.0
 execute unless data storage custom_music_discs:data jukebox.record.custom_music.pitch run data modify storage custom_music_discs:data jukebox.record.custom_music.pitch set value 1.0
-execute if data storage custom_music_discs:data jukebox.record.custom_music.sound run function custom_music_discs:replace_music_inner with storage custom_music_discs:data jukebox.record.custom_music
+execute if data storage custom_music_discs:data jukebox.record.custom_music.sound run function custom_music_discs:music/m_start with storage custom_music_discs:data jukebox.record.custom_music
 
-kill @s
+tag @s add custom_music_discs.playing

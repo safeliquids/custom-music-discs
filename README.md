@@ -19,4 +19,4 @@ In addition to the sound event id, several other properties can be given in the 
 4. ***"pitch": float, default: 1.0*** - pitch of the sound
 
 ## Known Issues
-- The custom music cannot be stopped by ejecting the record from the jukebox.
+

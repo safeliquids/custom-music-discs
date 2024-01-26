@@ -4,9 +4,16 @@ A Minecraft: Java Edition datapack that allows for playing custom made music dis
 
 ## Quick Start
 
-1. Download or clone the repository. Place the custom_music_disc subdirectory in your datapacks directory.
+1. Download or clone the repository. Place the custom_music_discs subdirectory in your datapacks directory.
 2. To apply a custom track to a disc, add the following structure to its tag:
 	```
 	{ custom_music: { sound: <name> } }
 	```
 	where `<name>` is the identifier of a sound event to play.
+
+## Full format
+In addition to the sound event id, several other properties can be given in the ***"custom_music"*** tag. All available tags are
+1. ***"sound": string, optional*** - id of the sound to play. If omitted, record music is stopped and nothing plays.
+2. ***"display_name": string, optional*** - name of the music that displays in the "Now Playing" actionbar message. If omitted, nothing is displayed. The name is treated as plain text, not JSON text component.
+3. ***"volume": float, default: 1.0*** - volume of the sound
+4. ***"pitch": float, default: 1.0*** - pitch of the sound

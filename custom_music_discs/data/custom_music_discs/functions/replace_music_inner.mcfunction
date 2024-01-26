@@ -1,1 +1,1 @@
-$playsound $(sound) record @a
+$playsound $(sound) record @a ~ ~ ~ $(volume) $(pitch)

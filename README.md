@@ -17,3 +17,6 @@ In addition to the sound event id, several other properties can be given in the 
 2. ***"display_name": string, optional*** - name of the music that displays in the "Now Playing" actionbar message. If omitted, nothing is displayed. The name is treated as plain text, not JSON text component.
 3. ***"volume": float, default: 1.0*** - volume of the sound
 4. ***"pitch": float, default: 1.0*** - pitch of the sound
+
+## Known Issues
+- The custom music cannot be stopped by ejecting the record from the jukebox.

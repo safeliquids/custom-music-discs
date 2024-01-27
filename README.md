@@ -25,5 +25,8 @@ stays under the same license and credits the author (ie. me). For convenience,
 a copy of the LICENSE document is insie the actual datapack folder so there is
 no need to manually copy it.
 
+## Acknowledgements
+The [Unofficial Minecraft Wiki](https://minecraft.wiki) has been a great resource when developing this datapack.
+
 ## Known Issues
 - if a custom disc is played during a server reload, the original record music is not stopped.

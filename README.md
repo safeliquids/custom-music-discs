@@ -18,5 +18,12 @@ In addition to the sound event id, several other properties can be given in the 
 3. ***"volume": float, default: 1.0*** - volume of the sound
 4. ***"pitch": float, default: 1.0*** - pitch of the sound
 
+## License
+This datapack is available under the MIT license. That means it can be
+re-released (such as in a Minecraft map) or otherwise used as long as it 
+stays under the same license and credits the author (ie. me). For convenience,
+a copy of the LICENSE document is insie the actual datapack folder so there is
+no need to manually copy it.
+
 ## Known Issues
 - if a custom disc is played during a server reload, the original record music is not stopped.

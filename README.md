@@ -19,4 +19,4 @@ In addition to the sound event id, several other properties can be given in the 
 4. ***"pitch": float, default: 1.0*** - pitch of the sound
 
 ## Known Issues
-- if a custom disc is played during a server reload, the original record music is not stopped. It is also possible to start the same custom music multiple times in the same tick.
+- if a custom disc is played during a server reload, the original record music is not stopped.

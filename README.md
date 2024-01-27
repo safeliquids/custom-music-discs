@@ -9,14 +9,14 @@ A Minecraft: Java Edition datapack that allows for playing custom made music dis
 	```
 	{ custom_music: { sound: <name> } }
 	```
-	where `<name>` is the identifier of a sound event to play.
+	where `<name>` is the identifier of a sound event to play, such as `"minecraft:entity.pig.ambient"`.
 
 ## Full format
 In addition to the sound event id, several other properties can be given in the ***"custom_music"*** tag. All available tags are
-1. ***"sound": string, optional*** - id of the sound to play. If omitted, record music is stopped and nothing plays.
-2. ***"display_name": string, optional*** - name of the music that displays in the "Now Playing" actionbar message. If omitted, nothing is displayed. The name is treated as plain text, not JSON text component.
-3. ***"volume": float, default: 1.0*** - volume of the sound
-4. ***"pitch": float, default: 1.0*** - pitch of the sound
+- ***"sound": string, optional*** - id of the sound to play. If omitted, record music is stopped and nothing plays.
+- ***"display_name": string, optional*** - name of the music that displays in the "Now Playing" actionbar message. If omitted, nothing is displayed. The name is treated as plain text, not JSON text component.
+- ***"volume": float, default: 4.0*** - volume of the sound. Note that volume higher than 1 does not make sounds louder and instead increases the range at which they can be heard. 4.0 corresponds to the range of regular jukeboxes (64 blocks.)
+- ***"pitch": float, default: 1.0*** - pitch of the sound
 
 ## License
 This datapack is available under the MIT license. That means it can be
@@ -29,4 +29,4 @@ no need to manually copy it.
 The [Unofficial Minecraft Wiki](https://minecraft.wiki) has been a great resource when developing this datapack.
 
 ## Known Issues
-- if a custom disc is played during a server reload, the original record music is not stopped.
+- If a custom disc is played during a server reload, the original record music is not stopped.

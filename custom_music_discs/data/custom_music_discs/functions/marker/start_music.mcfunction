@@ -15,7 +15,7 @@ execute if data storage custom_music_discs:data marker.custom_music.display_name
 execute unless data storage custom_music_discs:data marker.custom_music.sound run return 1
 
 #set defaults for volume and pitch
-execute unless data storage custom_music_discs:data marker.custom_music.volume run data modify storage custom_music_discs:data marker.custom_music.volume set value 1.0
+execute unless data storage custom_music_discs:data marker.custom_music.volume run data modify storage custom_music_discs:data marker.custom_music.volume set value 4.0
 execute unless data storage custom_music_discs:data marker.custom_music.pitch run data modify storage custom_music_discs:data marker.custom_music.pitch set value 1.0
 function custom_music_discs:music/m_start with storage custom_music_discs:data marker.custom_music
 

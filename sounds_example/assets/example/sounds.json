@@ -1,0 +1,25 @@
+{
+    "drume.stereo": {
+        "sounds": [
+            {
+                "name": "example:drume/drume",
+                "stream": true
+            }
+        ]
+    },
+    "drume.mono": {
+        "sounds": [
+            {
+                "name": "example:drume/drume_mono",
+                "stream": true
+            }
+        ]
+    },
+    "triangle": {
+        "sounds": [
+            {
+                "name": "example:triangle"
+            }
+        ]
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "pack":{
+        "description":"Example resource pack that adds custom sound events",
+        "pack_format":18
+    }
+}

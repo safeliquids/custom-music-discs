@@ -2,21 +2,36 @@
 
 A Minecraft: Java Edition datapack that allows for playing custom made music discs. This pack uses macros so Minecraft version 1.20.2 or higher is required.
 
-## Quick Start
+## Installation and Quick Start
 
 1. Download or clone the repository. Place the custom_music_discs subdirectory in your datapacks directory.
-2. To apply a custom track to a disc, add the following structure to its tag:
+2. If the server (or singleplayer world) is running, type the command `/reload` or restart it entirely.
+3. To apply a custom track to a disc, add the following structure to its tag:
 	```
 	{ custom_music: { sound: <name> } }
 	```
-	where `<name>` is the identifier of a sound event to play, such as `"minecraft:entity.pig.ambient"`.
+	where `<name>` is the identifier of a sound event to play, such as `"minecraft:entity.pig.ambient"`. That can be done by modifying the item data or a command such as
+	```mcfunction
+	/give @p music_disc_cat{custom_music:{sound:"minecraft:entity.pig.ambient"}}
+	```
 
-## Full format
-In addition to the sound event id, several other properties can be given in the ***"custom_music"*** tag. All available tags are
-- ***"sound": string, optional*** - id of the sound to play. If omitted, record music is stopped and nothing plays.
+## Behaviour
+Several data tags can be applied to a music disc item to make it play a custom sound. When a disc with custom music applied to it is inserted into a jukebox by a player, the vanilla record music is stopped and the configured sound is played instead. When it is ejected either by a player, a hopper or removing the jukebox, the custom music stops, similar to playing regular records.
+
+Do note that, stopping a sound in a given channel stops all instances of that sound currently playing in that channel. That may lead to some unwanted interactions eg. when playing multiple copies of the same custom music disc simultaneously. Also see [Known Issues](#known-issues).
+
+## Custom Music Format
+Custom music is applied to a vanilla music disc in a ***"custom_music"*** data tag inside the item's ***"tag"*** tag. Several properties can be set in ***"custom_music"***
+- ***"sound": string, optional*** - id of the sound event to play. If omitted, record music is stopped and nothing plays.
 - ***"display_name": string, optional*** - name of the music that displays in the "Now Playing" actionbar message. If omitted, nothing is displayed. The name is treated as plain text, not JSON text component.
 - ***"volume": float, default: 4.0*** - volume of the sound. Note that volume higher than 1 does not make sounds louder and instead increases the range at which they can be heard. 4.0 corresponds to the range of regular jukeboxes (64 blocks.)
 - ***"pitch": float, default: 1.0*** - pitch of the sound
+
+A command such as
+```mcfunction
+/give @p music_disc_cat{custom_music:{sound:"minecraft:entity.pig.ambient", display_name:"Piggy Noises!", volume:1.5, pitch:0.8}}
+```
+creates a custom music disc that plays the ambient pig noise at volume 1.5 and pitch 0.8. When played, it shows "Now Playing: Piggy Noises!" in the action bar of nearby players.
 
 ## Adding Custom Sounds via Resource Pack
 If you don't know how to add custom sounds to Minecraft, you can read [this guide](docs/sounds_guide.md). Check out [this article](https://minecraft.wiki/w/Resource_pack) for general information on resource packs and how to make one.

@@ -33,5 +33,7 @@ defines a sound event `example:drume.mono`. This event plays a file with the res
 
 Note that, the `"stream"` property set to true specifies that the file should not be entirely loaded into memory and instead be streamed from disk. This is recommended for sounds longer than a couple seconds. See [this article again](https://minecraft.wiki/w/Sounds.json) for all properties that can be used here.
 
+Also note that, whenever you change something in a resource pack *while the game is running*, you will need to reload resources. That is most easily done by pressing F3+T. (Alternatively, you can open the resource packs menu, moving your resource pack from "Selected" to "Available", clicking "Done" and then adding your resource pack again.)
+
 ## Mono and Stereo Sounds
 As said above, Minecraft only accepts .ogg files for sounds. Both stereo (left and right channels) and mono (only one channel) sound files work, however, there is a difference. Mono sounds are played from a specified position in the world and the volume decreases with distance. Stereo sounds always stay at the same volume even if a player moves far away from the origin of the sound.

@@ -30,3 +30,4 @@ The [Unofficial Minecraft Wiki](https://minecraft.wiki) has been a great resourc
 
 ## Known Issues
 - If a custom disc is played during a server reload, the original record music is not stopped.
+- When a custom disc is played, all sound events with the same id in the record channel are stopped. This is a technical limitation and unlikely to be fixed.

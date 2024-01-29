@@ -11,7 +11,7 @@ A Minecraft: Java Edition datapack that allows for playing custom made music dis
 	{ custom_music: { sound: <name> } }
 	```
 	where `<name>` is the identifier of a sound event to play, such as `"minecraft:entity.pig.ambient"`. That can be done by modifying the item data or a command such as
-	```mcfunction
+	```
 	/give @p music_disc_cat{custom_music:{sound:"minecraft:entity.pig.ambient"}}
 	```
 
@@ -28,7 +28,7 @@ Custom music is applied to a vanilla music disc in a ***"custom_music"*** data t
 - ***"pitch": float, default: 1.0*** - pitch of the sound
 
 A command such as
-```mcfunction
+```
 /give @p music_disc_cat{custom_music:{sound:"minecraft:entity.pig.ambient", display_name:"Piggy Noises!", volume:1.5, pitch:0.8}}
 ```
 creates a custom music disc that plays the ambient pig noise at volume 1.5 and pitch 0.8. When played, it shows "Now Playing: Piggy Noises!" in the action bar of nearby players.

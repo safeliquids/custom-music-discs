@@ -29,7 +29,7 @@ A `sounds.json` file placed like so adds sound events in the `example` namespace
     }
 }
 ```
-defines a sound event `example:drume.mono`. This event plays a file with the resource location `example:drume/drume_mono` which, as we already know, references the file `assets/example/sounds/drume/drume_mono.ogg` in a resource pack. [sounds.json](sounds_example/assets/example/sounds.json) in the example pack defines this and several other events.
+defines a sound event `example:drume.mono`. This event plays a file with the resource location `example:drume/drume_mono` which, as we already know, references the file `assets/example/sounds/drume/drume_mono.ogg` in a resource pack. [sounds.json](../sounds_example/assets/example/sounds.json) in the example pack defines this and several other events.
 
 Note that, the `"stream"` property set to true specifies that the file should not be entirely loaded into memory and instead be streamed from disk. This is recommended for sounds longer than a couple seconds. See [this article again](https://minecraft.wiki/w/Sounds.json) for all properties that can be used here.
 

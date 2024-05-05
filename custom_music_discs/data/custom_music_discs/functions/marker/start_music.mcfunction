@@ -3,6 +3,8 @@
 # 2. display Now Playing message
 # 3. play custom music with correct volume and pitch
 
+tag @s add custom_music_discs.playing
+
 function custom_music_discs:marker/stop_original_music
 
 title @a[distance=..64] times 10 70 20
@@ -16,4 +18,3 @@ execute unless data storage custom_music_discs:data marker.custom_music.volume r
 execute unless data storage custom_music_discs:data marker.custom_music.pitch run data modify storage custom_music_discs:data marker.custom_music.pitch set value 1.0
 function custom_music_discs:music/m_start with storage custom_music_discs:data marker.custom_music
 
-tag @s add custom_music_discs.playing

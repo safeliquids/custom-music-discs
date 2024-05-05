@@ -1,6 +1,6 @@
 # custom-music-discs
 
-A Minecraft: Java Edition datapack that allows for playing custom made music discs. This versin of the pack is compatible with Minecraft version 1.20.5.
+A Minecraft: Java Edition datapack that allows for playing custom made music discs. The pack is compatible with Minecraft versions 1.20.5 through 1.20.6. For other versions see tags eg. `1.20.2-1.20.4`.
 
 ## Installation and Quick Start
 

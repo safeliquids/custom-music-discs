@@ -7,5 +7,8 @@ execute store success score $is_playing custom_music_discs if entity @s[tag=cust
 execute if score $is_playing custom_music_discs matches 0 run function custom_music_discs:marker/start_music
 execute if score $is_playing custom_music_discs matches 0 run return 1
 
+execute unless entity @s[tag=custom_music_discs.stopped_twice] run function custom_music_discs:marker/stop_original_music
+execute unless entity @s[tag=custom_music_discs.stopped_twice] run tag @s add custom_music_discs.stopped_twice 
+
 # if the disc was ejected (or juke got removed), stop the music
 execute unless block ~ ~ ~ jukebox[has_record=true] run function custom_music_discs:marker/stop_music_and_kill

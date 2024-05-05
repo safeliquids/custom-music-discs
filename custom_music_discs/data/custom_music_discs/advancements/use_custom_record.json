@@ -15,7 +15,11 @@
                         "condition":"match_tool",
                         "predicate":{
                             "tag": "minecraft:music_discs",
-                            "nbt":"{custom_music:{}}"
+                            "predicates":{
+                                "minecraft:custom_data":{
+                                    "custom_music":{}
+                                }
+                            }
                         }
                     }
                 ]

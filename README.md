@@ -2,6 +2,13 @@
 
 A Minecraft: Java Edition datapack that allows for playing custom made music discs. The pack is compatible with Minecraft versions 1.20.5 through 1.20.6. For other versions see tags eg. `1.20.2-1.20.4`.
 
+As of Minecraft 1.21 it is possible to define custom jukebox music with
+datapacks and attach it to an item using a special data component. See
+[Data component format](https://minecraft.wiki/w/Data_component_format#jukebox_playable)
+and [Jukebox song definition](https://minecraft.wiki/w/Jukebox_song_definition)
+for detailed information. Therfore, this datapack is no longer necessary in 1.21
+and beyond and will not receive any updates.
+
 ## Installation and Quick Start
 
 1. Download or clone the repository. Place the custom_music_discs subdirectory in your datapacks directory.
